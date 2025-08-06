@@ -438,6 +438,65 @@ main {
 	grid-area: info;
 	align-self: end;
 	justify-self: end;
+	position: relative;
+	background: white;
+	padding: 15px 20px;
+	border-radius: 25px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+	z-index: 10;
+}
+
+.info a {
+	color: white;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.info a:hover {
+	color: #0947db;
+}
+
+.info::before {
+	content: '';
+	position: absolute;
+	top: -3px;
+	left: -3px;
+	right: -3px;
+	bottom: -3px;
+	background: linear-gradient(45deg, #0947db, #07d89d, #ee2d29, #f8ae2c, #0947db);
+	border-radius: 28px;
+	z-index: -1;
+	animation: gradientRotate 3s ease-in-out infinite;
+	background-size: 400% 400%;
+	transition: all 0.3s ease;
+}
+
+.info::after {
+	content: '';
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 120px;
+	height: 4px;
+	background: white;
+	border-radius: 2px;
+	background: linear-gradient(90deg, #0947db, #07d89d, #0947db);
+	box-shadow: 0 0 10px rgba(9, 71, 219, 0.3);
+}
+
+@keyframes gradientRotate {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .github {
