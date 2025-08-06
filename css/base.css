@@ -417,8 +417,7 @@ main {
 .codrops-header {
 	position: relative;
 	display: flex;
-	flex-direction: row;
-	align-items: flex-start;
+	flex-direction: column;
 	align-items: center;
 	align-self: start;
 	grid-area: header;
@@ -430,6 +429,39 @@ main {
 	padding: 0;
 	font-weight: 700;
 	font-size: 1em;
+	margin-bottom: -10px;
+	text-align: center;
+	width: 165px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.header-logo {
+	text-align: center;
+	margin: 15px 0;
+	width: 100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.home-logo {
+	max-width: 100px;
+	width: 100px;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+}
+
+.codrops-header__subtitle {
+	padding: 0;
+	font-weight: 400;
+	font-size: 0.9em;
+	color: var(--color-subtitle);
+	margin-top: 15px;
+	text-align: center;
+	width: 100px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .info {
